@@ -1,5 +1,7 @@
 # graphcms-blog
 
+Simple blog created with GraphCMS and VueJS
+
 ## Project setup
 ```
 npm install
