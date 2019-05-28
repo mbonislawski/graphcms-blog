@@ -1,11 +1,17 @@
 <template>
   <div class="home">
-    <div class="glitch">
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
+    <div class="home-hero">
+      <div class="glitch">
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+        <div class="glitch__img"></div>
+      </div>
+      <div class="hero-text">
+        <h1>GraphCMS blog</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
     </div>
   </div>
 </template>
@@ -94,6 +100,26 @@ $blend-color-5: #af4949;
   background-color: $blend-color-5;
   background-blend-mode: $blend-mode-5;
   animation-name: glitch-anim-flash;
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 10;
+  top: 65%;
+  left: 0;
+  right: 0;
+
+  h1 {
+    color: #F3EFE0;
+    font-size: 60px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  p {
+    color: #F3EFE0;
+    font-size: 16px;
+  }
 }
 
 @keyframes glitch-anim-1 {
