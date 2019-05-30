@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <router-link class="home-url" to="/" v-if="!['home'].includes($route.name)">
+      <img src="@/assets/home.svg">
+    </router-link>
     <div class="hamburger" :class="{'active': menuActive}" @click="menuActive = !menuActive">
       <span></span>
       <span></span>
@@ -32,6 +35,33 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.container {
+  width: 1350px;
+  margin: auto;
+}
+
+body {
+  background-color: #0d0c0c;
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.home-url {
+  width: 28px;
+  display: block;
+  top: 35px;
+  left: 30px;
+  position: absolute;
 }
 
 .hamburger {
