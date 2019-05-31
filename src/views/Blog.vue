@@ -71,7 +71,6 @@ export default {
     })
       .then((response) => {
         this.posts = response.data.data.blogPosts;
-        console.log(this.posts);
       })
       .catch(error => console.log(error));
   },
