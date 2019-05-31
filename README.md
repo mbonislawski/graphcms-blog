@@ -1,6 +1,7 @@
 # graphcms-blog
 
 Simple blog created with GraphCMS and VueJS
+url: https://clever-khorana-6f13ab.netlify.com/
 
 ## Project setup
 ```
