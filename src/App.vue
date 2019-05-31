@@ -10,7 +10,6 @@
     </div>
     <div id="nav" :class="{'active': menuActive}" @click="menuActive = false">
       <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
       <router-link to="/blog">Blog</router-link>
     </div>
     <router-view/>
@@ -40,6 +39,7 @@ export default {
 .container {
   width: 1350px;
   margin: auto;
+  padding: 0 20px;
 }
 
 body {

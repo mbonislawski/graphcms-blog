@@ -8,8 +8,8 @@
       <div class="text-holder">
         <div class="title-row">
           <h1>{{ item.title }}</h1>
-          <p v-if="item.postDate">{{ item.postDate }}</p>
-          <p v-else>{{ item.createdAt }}</p>
+          <p v-if="item.postDate">{{ item.postDate | moment }}</p>
+          <p v-else>{{ item.createdAt | moment }}</p>
         </div>
         <div class="thumbnail"></div>
         <div class="description">
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   name: 'Modal',
   props: {
@@ -28,6 +30,11 @@ export default {
     title: String,
     thumbnail: String,
     item: Object,
+  },
+  filters: {
+    moment(date) {
+      return moment(date).format('MMM Do YYYY, h:mm a');
+    },
   },
 };
 </script>
@@ -45,11 +52,23 @@ export default {
     min-height: 100vh;
     padding-top: 50px;
     padding-bottom: 50px;
+    @media(max-width: 1024px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     .container {
       background-color: #ebe8e8;
       min-height: 100vh;
+      padding: 0;
       padding-bottom: 80px;
+      @media(max-width: 1600px) {
+        width: calc(100% - 150px);
+        margin: auto;
+      }
+      @media(max-width: 1024px) {
+        width: 100%;
+      }
     }
 
     .close-modal {
@@ -59,6 +78,15 @@ export default {
       cursor: pointer;
       opacity: .8;
       transition: all .3s;
+      @media(max-width: 1600px) {
+        right: 15px;
+        top: 35px;
+      }
+      @media(max-width: 1024px) {
+        top: 20px;
+        background-color: #0d0c0c;
+        height: 48px;
+      }
 
       &:hover {
         opacity: 1;
@@ -89,6 +117,10 @@ export default {
       width: 1000px;
       margin: auto;
       padding-top: 30px;
+      @media(max-width: 1600px) {
+        padding: 30px;
+        max-width: 100%;
+      }
 
       .description {
         img {

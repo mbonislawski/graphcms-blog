@@ -25,6 +25,13 @@ export default {
     padding: 4px;
     border-radius: 4px;
     transition: all .3s ease-in-out;
+    @media(max-width: 1024px) {
+      width: 70%;
+      margin-bottom: 40px;
+    }
+    @media(max-width: 600px) {
+      width: 90%;
+    }
     &:hover {
       transform: translateY(-10px);
       cursor: pointer;
@@ -40,6 +47,9 @@ export default {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      @media(max-width: 1024px) {
+        height: 300px;
+      }
     }
 
     h2 {

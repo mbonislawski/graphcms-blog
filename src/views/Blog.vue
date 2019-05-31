@@ -78,11 +78,22 @@ export default {
 };
 </script>
 <style lang="scss">
+.blog {
+  .container {
+    max-width: 100%;
+  }
+}
 .blog-posts {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 200px;
+  @media(max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+  }
 }
 .lds-ripple {
   display: inline-block;

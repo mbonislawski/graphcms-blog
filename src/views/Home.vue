@@ -108,12 +108,18 @@ $blend-color-5: #af4949;
   top: 65%;
   left: 0;
   right: 0;
+  @media(max-width: 768px) {
+    padding: 0 20px;
+  }
 
   h1 {
     color: #F3EFE0;
     font-size: 60px;
     margin: 0;
     line-height: 1;
+    @media(max-width: 768px) {
+      font-size: 50px;
+    }
   }
 
   p {
